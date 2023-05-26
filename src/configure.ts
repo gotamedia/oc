@@ -25,5 +25,5 @@ const configure = (config: OC_SERVICE_CONFIG_Type) => {
 
 export {
     OC_SERVICE_CONFIG,
-    configure as default
+    configure
 }
