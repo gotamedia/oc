@@ -1,2 +1,2 @@
-export { default as getErrorTrace } from "./getErrorTrace"
-export { default as logError } from "./logError"
+export * from "./services"
+export * from "./configure"

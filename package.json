@@ -1,14 +1,14 @@
 {
-    "name": "@gotamedia/utils",
-    "version": "0.0.2",
+    "name": "@gotamedia/oc",
+    "version": "0.0.0",
     "private": false,
-    "description": "Set of Utils helper for NodeJs Runtime.",
+    "description": "Set of OC helper for NodeJs Runtime.",
     "main": "index.js",
     "types": "index.d.ts",
     "keywords": [
         "Gota",
         "Gota Media",
-        "Utils"
+        "OC"
     ],
     "scripts": {
         "build": "tsc",
@@ -19,11 +19,14 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://bitbucket.org/gotamedia/utils.git"
+        "url": "https://bitbucket.org/gotamedia/oc.git"
     },
-    "homepage": "https://bitbucket.org/gotamedia/utils#readme",
+    "homepage": "https://bitbucket.org/gotamedia/oc#readme",
     "devDependencies": {
-        "source-map-support": "^0.5.21",
+        "@types/node": "^20.2.4",
         "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "@gotamedia/utils": "^0.0.1"
     }
 }

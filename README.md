@@ -1,3 +1,3 @@
-# Gota Media Utils
+# Gota Media OC
 
-Set of Utils helpers for NodeJs Runtime.
+Set of OC helpers for NodeJs Runtime.
