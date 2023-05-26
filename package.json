@@ -27,6 +27,6 @@
         "typescript": "^5.0.4"
     },
     "dependencies": {
-        "@gotamedia/utils": "^0.0.1"
+        "@gotamedia/utils": "^0.0.3"
     }
 }
