@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.1](https://bitbucket.org/gotamedia/oc/compare/0.1.1..0.1.0) (2023-05-29)
+
+
+### Bug Fixes
+
+* **doc:** Updated README. ([003cbce](https://bitbucket.org/gotamedia/oc/commits/003cbce7507ebbf90c9078fbc0e89cf321b3d89d))
+
 ## [0.1.0](https://bitbucket.org/gotamedia/oc/compare/0.1.0..0.0.3) (2023-05-29)
 
 
