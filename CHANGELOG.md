@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://bitbucket.org/gotamedia/oc/compare/0.1.0..0.0.3) (2023-05-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* Introduced @gotamedia/oc package.
+
+### Features
+
+* Introduced @gotamedia/oc package. ([0e5b0a8](https://bitbucket.org/gotamedia/oc/commits/0e5b0a8d8f5c2e938a7860bcde8564302f2048ac))
+
 ## [0.0.3](https://bitbucket.org/gotamedia/oc/compare/0.0.3..0.0.2) (2023-05-26)
 
 
