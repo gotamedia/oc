@@ -21,9 +21,6 @@ In your lambda, import configure() from `@gotamedia/oc/configure` and make sure 
 ##### configure()
 | property     | type    | default | required | description                                                                                    |
 |--------------|---------|---------|----------|------------------------------------------------------------------------------------------------|
-| debug        | boolean | false   |          | A debug flag, if set to true AWS Layer will start outputting helpful logs for all it's methods |
-| throwErrors  | boolean | false   |          | Throw all caught errors from AWS SDK                                                           |
-| outputErrors | boolean | true    |          | Output all caught errors from AWS SDK                                                          |
 | baseUrl      | string  | null    |     x    | Base url for OC to be used                                                                     |
 | username     | string  | null    |     x    | A valid username to be used for authorization                                                  |
 | password     | string  | null    |     x    | A valid password to be used for authorization                                                  |
@@ -33,9 +30,6 @@ In your lambda, import configure() from `@gotamedia/oc/configure` and make sure 
 import configure from "@gotamedia/oc/configure"
 
 configure({
-    debug: true,
-    outputErrors: true,
-    throwErrors: true,
     baseUrl: "https://gota.oc.com",
     username: "admin",
     password: "admin"
