@@ -1,6 +1,4 @@
-import debug from "../debug.js"
-import handleError from "../handleError.js"
-
+import { ObjectsError } from "../errors"
 import { OC_SERVICE_CONFIG } from "../configure.js"
 
 const getObject = async (uuid: string) => {
@@ -11,24 +9,12 @@ const getObject = async (uuid: string) => {
     } = OC_SERVICE_CONFIG
 
     if (!uuid) {
-        handleError(
-            new Error("Missing required uuid for OC service, make sure to pass object uuid"),
-            {
-                params: {
-                    uuid: uuid
-                }
-            },
-            true
-        )
-
-        return
+        throw new ObjectsError("Missing required uuid for OC service, make sure to pass object uuid")
     }
-
-    debug(`Get OC object with UUID: ${uuid}`)
 
     try {
         const requestUrl = `${baseUrl}/objects/${uuid}`
-        
+
         const credentials = Buffer.from(`${username}:${password}`).toString("base64")
         const requestOptions = {
             headers: {
@@ -36,26 +22,19 @@ const getObject = async (uuid: string) => {
             }
         }
 
-        debug("Fetching OC object from: ", requestUrl)
-    
         const response = await fetch(requestUrl, requestOptions)
 
         if (!response.ok) {
-            handleError(
-                new Error("Something went wrong while fetching object from OC"),
-                `Could not fetch object ${uuid} from OpenContent`
-            )
-
-            return
+            throw new ObjectsError(`Could not fetch object ${uuid} from OpenContent`)
         }
-    
+
         const data = await response.text()
 
         return data
     } catch (error) {
-        handleError(error as Error, `Something went wrong while fetching object ${uuid} from OC`)
-
-        return
+        throw new ObjectsError(`Something went wrong while fetching object ${uuid} from OC`, {
+            cause: error as Error
+        })
     }
 }
 
