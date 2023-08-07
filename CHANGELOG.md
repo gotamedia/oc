@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.1](https://github.com/gotamedia/oc/compare/0.2.0...0.2.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* GH Actions ([a3ab9dd](https://github.com/gotamedia/oc/commit/a3ab9ddec6c3793b4c177903165763ca0147ab20))
+
 ## [0.2.0](https://bitbucket.org/gotamedia/oc/compare/0.2.0..0.1.1) (2023-06-09)
 
 
