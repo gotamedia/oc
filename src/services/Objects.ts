@@ -60,8 +60,8 @@ const getImage = async (uuid: string) => {
         }
 
         const files = await filesResponse.json()
-        const primaryFile = files["metadata"][0]["filename"] ?? "";
-        if (primaryFile === "") {
+        const primaryFile = files["metadata"]?.[0]?.["filename"]
+        if (!primaryFile) {
             throw new ObjectsError(
                 `Cannot determine primary filename when fetching image xml for ${uuid} from OpenContent`
             )
