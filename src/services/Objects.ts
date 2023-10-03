@@ -60,12 +60,20 @@ const getImage = async (uuid: string) => {
         }
 
         const files = await filesResponse.json()
-        const imageXml = await fetch(
-            `${baseUrl}/objects/${uuid}/files/${files["metadata"][0]["filename"]}`,
-            requestParams
-        )
+        const primaryFile = files["metadata"][0]["filename"] ?? "";
+        if (primaryFile === "") {
+            throw new ObjectsError(
+                `Cannot determine primary filename when fetching image xml for ${uuid} from OpenContent`
+            )
+        }
 
-        return await imageXml.text()
+        const imageXmlResponse = await fetch(`${baseUrl}/objects/${uuid}/files/${primaryFile}`, requestParams)
+
+        if (!imageXmlResponse.ok) {
+            throw new ObjectsError(`Could not fetch image-xml ${uuid}/files/${primaryFile} from OpenContent`)
+        }
+
+        return await imageXmlResponse.text()
     } catch (error) {
         throw new ObjectsError(`Something went wrong while fetching image ${uuid} from OC`, {
             cause: error as Error
