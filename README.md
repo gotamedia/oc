@@ -44,6 +44,7 @@ const handler = async () => {
 Available services:
 * Logs
 * Objects
+* Images
 
 ### Logs
 
@@ -83,6 +84,24 @@ import { getObject } from "@gotamedia/oc/services/Objects"
 
 const handler = async () => {
     const object = await getObject("1234-4321-123-321-00-000")
+}
+```
+
+### Images
+
+#### Available methods:
+
+##### getImage()
+| param  | type      | default    | required | description   |
+|--------|-----------|------------|----------|---------------|
+| first  | string    | undefined  |     x    | OC Image uuid |
+
+**Example:**
+```ts
+import { getImage } from "@gotamedia/oc/services/Objects"
+
+const handler = async () => {
+    const imageXml = await getImage("1234-4321-123-321-00-000")
 }
 ```
 
