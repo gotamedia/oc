@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.0](https://github.com/gotamedia/oc/compare/0.2.1...0.3.0) (2023-10-04)
+
+
+### Features
+
+* Added support to fetch images ([8d19827](https://github.com/gotamedia/oc/commit/8d19827df7e426d63fae6639b967a712d05e7ce8))
+* more PR fixes ([2763dd7](https://github.com/gotamedia/oc/commit/2763dd7e657b68e5888bd3eca651d57fc02615cc))
+* PR fixes ([9ee0a04](https://github.com/gotamedia/oc/commit/9ee0a04e7e2908512a31798128cf491a29e97cf0))
+
 ## [0.2.1](https://github.com/gotamedia/oc/compare/0.2.0...0.2.1) (2023-08-07)
 
 
